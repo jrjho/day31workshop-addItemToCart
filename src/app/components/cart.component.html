@@ -1,0 +1,16 @@
+<h2>Cart Items</h2>
+
+<div *ngIf="cartInfoFromParent.length <= 0">
+  <h2>Your cart is empty</h2>
+</div>
+
+<div *ngIf="cartInfoFromParent.length > 0">
+  <div *ngFor="let item of cartInfoFromParent; let idx = index">
+    <img src="{{item.imageUrl}}" width="50">
+    <span>{{item.name}}: {{item.quantity}}</span>
+ 
+    <button type="button" (click)="RemoveFromCart(item)">Delete</button>
+  </div>
+</div>
+
+

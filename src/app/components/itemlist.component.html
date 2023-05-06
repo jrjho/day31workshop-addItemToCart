@@ -1,0 +1,8 @@
+<h2>Item List</h2>
+
+<div *ngFor="let item of items; let i = index" >
+    <img src="{{item.imageUrl}}" width="50">
+    <span>{{item.name }}</span>
+    <button type="button" (click)="reduceItem(item)">-</button>
+    <button type="button" (click)="addItem(item)">+</button>
+</div>
